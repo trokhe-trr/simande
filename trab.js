@@ -13,15 +13,11 @@ var getVector = function(start,end,qt){
 	var seed = n;  
 
 	var vet = [];
-	console.log("aqui3");
 
 	for(var i=0; i<qt; i++){
 		var r = random(seed++)*(end-start)+start
-		console.log("aquix");
-		vet.push(r);
+		vet.push(Math.floor(r));
 	}
-
-	console.log("aqui4");
 
 	return vet;
 };
@@ -32,5 +28,11 @@ function calculate() {
 	var qt = document.getElementById('qt').value;
 	var result = getVector(start,end,qt);
 
-	document.getElementById('result').innerHTML = "["+result+"]";
+	document.getElementById('result').innerHTML = "[ ";
+
+	for(var i=0; i<qt; i++){
+		document.getElementById('result').innerHTML += result[i]+" ";		
+	}
+
+	document.getElementById('result').innerHTML += "]";
 }
