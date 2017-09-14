@@ -30,9 +30,9 @@ function calculate() {
 
 	document.getElementById('result').innerHTML = "[ ";
 
-	for(var i=0; i<qt; i++){
-		document.getElementById('result').innerHTML += result[i]+" ";		
+	for(var i=0; i<qt-1; i++){
+		document.getElementById('result').innerHTML += result[i]+" | ";
 	}
 
-	document.getElementById('result').innerHTML += "]";
+	document.getElementById('result').innerHTML += result[i]+" ]";
 }
